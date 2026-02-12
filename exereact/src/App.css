@@ -1,0 +1,67 @@
+.app {
+  min-height: 100vh;
+  background: #0a0a14;
+  padding: 60px 40px;
+  font-family: "DM Sans", sans-serif;
+  color: #f0ece2;
+}
+
+.app h1 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+/* ---------- DisplayCards ---------- */
+.display-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ---------- CarCard ---------- */
+.car-card {
+  background: linear-gradient(145deg, #141422, #1a1a2e);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(231, 190, 115, 0.4);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.car-card__marque {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e7be73;
+  margin: 0 0 8px;
+}
+
+.car-card__modele {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.car-card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+}
+
+.car-card__annee {
+  font-size: 0.85rem;
+  color: rgba(240, 236, 226, 0.5);
+}
+
+.car-card__prix {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e7be73;
+}
