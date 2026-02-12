@@ -52,6 +52,12 @@
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
+.car-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .car-card__marque {
   font-size: 0.75rem;
   letter-spacing: 3px;
@@ -83,6 +89,29 @@
   font-size: 1rem;
   font-weight: 600;
   color: #e7be73;
+}
+
+/* ---------- DeleteButton ---------- */
+.delete-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 80, 80, 0.3);
+  color: rgba(255, 80, 80, 0.6);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 80, 80, 0.15);
+  border-color: rgba(255, 80, 80, 0.6);
+  color: #ff5050;
 }
 
 /* ---------- AddCarForm ---------- */

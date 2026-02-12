@@ -1,10 +1,14 @@
 import CarCard from "./CarCard";
 
-const DisplayCards = ({ voitures }) => {
+const DisplayCards = ({ voitures, onDelete }) => {
   return (
     <div className="display-cards">
-      {voitures.map((voiture) => (
-        <CarCard key={voiture.id} voiture={voiture} />
+      {voitures.map((voiture, index) => (
+        <CarCard
+          key={voiture.id}
+          voiture={voiture}
+          onDelete={() => onDelete(index)}
+        />
       ))}
     </div>
   );

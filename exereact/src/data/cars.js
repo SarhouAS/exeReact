@@ -7,7 +7,17 @@ export const carsData = [
 ];
 
 /**
- * Trie une liste de voitures selon leur prix.
+ * Supprime un élément d'une liste à un index donné.
+ * @param {Array} list - La liste d'éléments
+ * @param {number} index - L'index de l'élément à supprimer
+ * @returns {Array} Une nouvelle liste sans l'élément supprimé
+ */
+export const deleteElement = (list, index) => {
+  return list.filter((_, i) => i !== index);
+};
+
+/**
+ * Trie une liste de voitures par prix.
  * @param {Array} cars - La liste de voitures à trier
  * @param {boolean} ascending - true = croissant, false = décroissant
  * @returns {Array} La liste triée (nouvelle copie)

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { carsData, sortCar } from "./data/cars";
+import { carsData, sortCar, deleteElement } from "./data/cars";
 import DisplayCards from "./components/DisplayCards";
 import AddCarForm from "./components/AddCarForm";
 import "./App.css";
@@ -14,6 +14,12 @@ const App = () => {
 
   const sortedCars = sortCar(cars, ascending);
 
+  const handleDeleteCar = (sortedIndex) => {
+    const carToDelete = sortedCars[sortedIndex];
+    const originalIndex = cars.findIndex((c) => c.id === carToDelete.id);
+    setCars(deleteElement(cars, originalIndex));
+  };
+
   return (
     <div className="app">
       <h1>Collection Automobile</h1>
@@ -27,7 +33,7 @@ const App = () => {
         Trier par prix : {ascending ? "↑ Croissant" : "↓ Décroissant"}
       </button>
 
-      <DisplayCards voitures={sortedCars} />
+      <DisplayCards voitures={sortedCars} onDelete={handleDeleteCar} />
     </div>
   );
 };
