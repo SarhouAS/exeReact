@@ -5,3 +5,15 @@ export const carsData = [
   { id: 4, marque: "Audi",     modele: "RS e-tron GT",    annee: 2023, prix: 147500 },
   { id: 5, marque: "Alpine",   modele: "A110 S",          annee: 2024, prix: 72900  },
 ];
+
+/**
+ * Trie une liste de voitures selon leur prix.
+ * @param {Array} cars - La liste de voitures à trier
+ * @param {boolean} ascending - true = croissant, false = décroissant
+ * @returns {Array} La liste triée (nouvelle copie)
+ */
+export const sortCar = (cars, ascending) => {
+  return [...cars].sort((a, b) =>
+    ascending ? a.prix - b.prix : b.prix - a.prix
+  );
+};

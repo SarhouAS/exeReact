@@ -8,7 +8,26 @@
 
 .app h1 {
   font-size: 2.4rem;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+}
+
+/* ---------- Bouton tri ---------- */
+.sort-btn {
+  background: transparent;
+  border: 1px solid rgba(231, 190, 115, 0.4);
+  color: #e7be73;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  margin-bottom: 32px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sort-btn:hover {
+  background: rgba(231, 190, 115, 0.1);
+  transform: translateY(-2px);
 }
 
 /* ---------- DisplayCards ---------- */
@@ -64,4 +83,43 @@
   font-size: 1rem;
   font-weight: 600;
   color: #e7be73;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .app {
+    padding: 32px 20px;
+  }
+
+  .app h1 {
+    font-size: 1.6rem;
+  }
+
+  .display-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 24px 12px;
+  }
+
+  .app h1 {
+    font-size: 1.3rem;
+  }
+
+  .sort-btn {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .car-card {
+    padding: 20px 16px;
+  }
+
+  .car-card__modele {
+    font-size: 1.15rem;
+  }
 }
