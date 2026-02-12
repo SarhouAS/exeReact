@@ -91,6 +91,45 @@
   color: #e7be73;
 }
 
+/* ---------- Toolbar ---------- */
+.app__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* ---------- DisplayPriceAverage ---------- */
+.price-average {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(145deg, #141422, #1a1a2e);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.price-average__label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(240, 236, 226, 0.4);
+}
+
+.price-average__value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e7be73;
+}
+
+.price-average__count {
+  font-size: 0.8rem;
+  color: rgba(240, 236, 226, 0.35);
+}
+
 /* ---------- DeleteButton ---------- */
 .delete-btn {
   background: transparent;
@@ -220,6 +259,16 @@
   .sort-btn {
     width: 100%;
     font-size: 0.85rem;
+  }
+
+  .app__toolbar {
+    flex-direction: column;
+  }
+
+  .price-average {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   .add-car-form {

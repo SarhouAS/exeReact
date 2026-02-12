@@ -2,6 +2,7 @@ import { useState } from "react";
 import { carsData, sortCar, deleteElement } from "./data/cars";
 import DisplayCards from "./components/DisplayCards";
 import AddCarForm from "./components/AddCarForm";
+import DisplayPriceAverage from "./components/DisplayPriceAverage.jsx";
 import "./App.css";
 
 const App = () => {
@@ -26,12 +27,16 @@ const App = () => {
 
       <AddCarForm onAddCar={handleAddCar} />
 
-      <button
-        className="sort-btn"
-        onClick={() => setAscending(!ascending)}
-      >
-        Trier par prix : {ascending ? "↑ Croissant" : "↓ Décroissant"}
-      </button>
+      <div className="app__toolbar">
+        <button
+          className="sort-btn"
+          onClick={() => setAscending(!ascending)}
+        >
+          Trier par prix : {ascending ? "↑ Croissant" : "↓ Décroissant"}
+        </button>
+
+        <DisplayPriceAverage voitures={cars} />
+      </div>
 
       <DisplayCards voitures={sortedCars} onDelete={handleDeleteCar} />
     </div>

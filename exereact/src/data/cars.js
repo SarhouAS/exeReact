@@ -7,6 +7,25 @@ export const carsData = [
 ];
 
 /**
+ * Calcule la moyenne d'une liste de nombres.
+ * @param {number[]} prices - La liste de nombres
+ * @returns {number} La moyenne (0 si liste vide)
+ */
+export const priceAverage = (prices) => {
+  if (prices.length === 0) return 0;
+  return prices.reduce((sum, p) => sum + p, 0) / prices.length;
+};
+
+/**
+ * Extrait les prix d'une liste de voitures.
+ * @param {Array} cars - La liste de voitures
+ * @returns {number[]} La liste des prix
+ */
+export const extractPriceFromCarList = (cars) => {
+  return cars.map((car) => car.prix);
+};
+
+/**
  * Supprime un élément d'une liste à un index donné.
  * @param {Array} list - La liste d'éléments
  * @param {number} index - L'index de l'élément à supprimer
@@ -17,7 +36,7 @@ export const deleteElement = (list, index) => {
 };
 
 /**
- * Trie une liste de voitures par prix.
+ * Trie une liste de voitures selon leur prix.
  * @param {Array} cars - La liste de voitures à trier
  * @param {boolean} ascending - true = croissant, false = décroissant
  * @returns {Array} La liste triée (nouvelle copie)
