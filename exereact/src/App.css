@@ -85,6 +85,80 @@
   color: #e7be73;
 }
 
+/* ---------- AddCarForm ---------- */
+.add-car-form {
+  background: linear-gradient(145deg, #141422, #1a1a2e);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin-bottom: 32px;
+}
+
+.add-car-form__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e7be73;
+  margin: 0 0 20px;
+}
+
+.add-car-form__fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.add-car-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.add-car-form__group label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(240, 236, 226, 0.4);
+}
+
+.add-car-form__group input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #f0ece2;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.add-car-form__group input::placeholder {
+  color: rgba(240, 236, 226, 0.25);
+}
+
+.add-car-form__group input:focus {
+  border-color: rgba(231, 190, 115, 0.5);
+}
+
+.add-car-form__submit {
+  background: rgba(231, 190, 115, 0.15);
+  border: 1px solid rgba(231, 190, 115, 0.4);
+  color: #e7be73;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-car-form__submit:hover {
+  background: rgba(231, 190, 115, 0.25);
+  transform: translateY(-2px);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .app {
@@ -93,6 +167,10 @@
 
   .app h1 {
     font-size: 1.6rem;
+  }
+
+  .add-car-form__fields {
+    grid-template-columns: 1fr;
   }
 
   .display-cards {
@@ -113,6 +191,14 @@
   .sort-btn {
     width: 100%;
     font-size: 0.85rem;
+  }
+
+  .add-car-form {
+    padding: 20px 16px;
+  }
+
+  .add-car-form__submit {
+    width: 100%;
   }
 
   .car-card {
