@@ -102,6 +102,82 @@ html, body, #root {
   color: #e7be73;
 }
 
+/* ---------- CarCard Colors ---------- */
+.car-card__colors {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.car-card__colors-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.car-card__color-tag {
+  background: rgba(231, 190, 115, 0.12);
+  border: 1px solid rgba(231, 190, 115, 0.25);
+  color: #e7be73;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.car-card__no-color {
+  font-size: 0.75rem;
+  color: rgba(240, 236, 226, 0.25);
+  font-style: italic;
+}
+
+.car-card__color-add {
+  display: flex;
+  gap: 6px;
+}
+
+.car-card__color-add input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-family: inherit;
+  color: #f0ece2;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.car-card__color-add input::placeholder {
+  color: rgba(240, 236, 226, 0.25);
+}
+
+.car-card__color-add input:focus {
+  border-color: rgba(231, 190, 115, 0.5);
+}
+
+.car-card__color-add button {
+  background: rgba(231, 190, 115, 0.15);
+  border: 1px solid rgba(231, 190, 115, 0.3);
+  color: #e7be73;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.car-card__color-add button:hover {
+  background: rgba(231, 190, 115, 0.25);
+}
+
 /* ---------- Toolbar ---------- */
 .app__toolbar {
   display: flex;

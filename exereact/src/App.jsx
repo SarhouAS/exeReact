@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { carsData, sortCar, deleteElement } from "./data/cars";
+import { carsData, sortCar, deleteElement, addColorToCar } from "./data/cars";
 import DisplayCards from "./components/DisplayCards";
 import AddCarForm from "./components/AddCarForm";
-import DisplayPriceAverage from "./components/DisplayPriceAverage.jsx";
+import DisplayPriceAverage from "./components/DisplayPriceAverage";
 import "./App.css";
 
 const App = () => {
@@ -13,13 +13,17 @@ const App = () => {
     setCars([...cars, newCar]);
   };
 
-  const sortedCars = sortCar(cars, ascending);
-
   const handleDeleteCar = (sortedIndex) => {
     const carToDelete = sortedCars[sortedIndex];
     const originalIndex = cars.findIndex((c) => c.id === carToDelete.id);
     setCars(deleteElement(cars, originalIndex));
   };
+
+  const handleAddColor = (modele, color) => {
+    setCars(addColorToCar(cars, modele, color));
+  };
+
+  const sortedCars = sortCar(cars, ascending);
 
   return (
     <div className="app">
@@ -38,7 +42,11 @@ const App = () => {
         <DisplayPriceAverage voitures={cars} />
       </div>
 
-      <DisplayCards voitures={sortedCars} onDelete={handleDeleteCar} />
+      <DisplayCards
+        voitures={sortedCars}
+        onDelete={handleDeleteCar}
+        onAddColor={handleAddColor}
+      />
     </div>
   );
 };

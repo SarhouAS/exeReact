@@ -17,6 +17,7 @@ const AddCarForm = ({ onAddCar }) => {
       modele,
       annee: parseInt(annee),
       prix: parseFloat(prix),
+      availableColors: [],
     };
 
     onAddCar(newCar);
